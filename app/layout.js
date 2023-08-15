@@ -1,7 +1,17 @@
+"use client"
+import dynamic from 'next/dynamic'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 
-const inter = Inter({ subsets: ['latin'] })
+config.autoAddCss = false;
+
+const LayoutContainer = dynamic(() => import('./LayoutContanier'), {
+  ssr : false
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,8 +20,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ar" dir='rtl'>
+    
+      <body 
+      >
+       <LayoutContainer>
+         {children}
+       </LayoutContainer>
+       
+      </body>
     </html>
   )
 }
