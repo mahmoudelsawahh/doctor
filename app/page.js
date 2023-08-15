@@ -1,8 +1,16 @@
-import Banner from './Banner/Banner'
-import ClinicCategory from './Banner/Clinic-category/ClinicCategory'
-import BookDoctor from './BookDoctor/BookDoctor'
-import Footer from './Footer/Footer'
-
+import dynamic from 'next/dynamic'
+const Banner = dynamic(() => import('./Banner/Banner'), {
+  ssr : false
+})
+const ClinicCategory = dynamic(() => import('./Banner/Clinic-category/ClinicCategory'), {
+  ssr : false
+})
+const BookDoctor = dynamic(() => import('./BookDoctor/BookDoctor'), {
+  ssr : false
+})
+const Footer = dynamic(() => import('./Footer/Footer'), {
+  ssr : false
+})
 const page = () => {
   return (
     <>
