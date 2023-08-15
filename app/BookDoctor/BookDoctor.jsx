@@ -66,7 +66,7 @@ const BookDoctor = () => {
 							</div>
 							<div className="about-content">
 								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-								<p>web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes</p>					
+								<p>web page editors now use Lorem Ipsum as their default model text, and a search for  will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes</p>					
 								<a href="javascript:;">Read More..</a>
 							</div>
 						</div>
