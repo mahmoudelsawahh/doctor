@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Logo from '/public/logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAnglesRight } from '@fortawesome/free-solid-svg-icons'
 const Footer = () => {
   return (
 	<footer className="footer">
@@ -9,7 +11,7 @@ const Footer = () => {
 						<div className="row flex-row-reverse">
 							<div className="col-lg-3 col-md-6">
 							
-								<div className="footer-widget footer-about">
+								<div className="footer-widget footer-about text-center">
 									<div className="footer-logo">
 										<Image src={Logo} alt="logo"/>
 									</div>
@@ -43,11 +45,11 @@ const Footer = () => {
 								<div className="footer-widget footer-menu">
 									<h2 className="footer-title">For Patients</h2>
 									<ul>
-										<li><a href="search.html"><i className="fas fa-angle-double-right"></i> Search for Doctors</a></li>
-										<li><a href="login.html"><i className="fas fa-angle-double-right"></i> Login</a></li>
-										<li><a href="register.html"><i className="fas fa-angle-double-right"></i> Register</a></li>
-										<li><a href="booking.html"><i className="fas fa-angle-double-right"></i> Booking</a></li>
-										<li><a href="patient-dashboard.html"><i className="fas fa-angle-double-right"></i> Patient Dashboard</a></li>
+										<li><a href="search.html"><FontAwesomeIcon icon={faAnglesRight} /> Search for Doctors</a></li>
+										<li><a href="login.html"><FontAwesomeIcon icon={faAnglesRight} /> Login</a></li>
+										<li><a href="register.html"><FontAwesomeIcon icon={faAnglesRight} /> Register</a></li>
+										<li><a href="booking.html"><FontAwesomeIcon icon={faAnglesRight} /> Booking</a></li>
+										<li><a href="patient-dashboard.html"><FontAwesomeIcon icon={faAnglesRight} /> Patient Dashboard</a></li>
 									</ul>
 								</div>								
 							</div>
@@ -57,11 +59,11 @@ const Footer = () => {
 								<div className="footer-widget footer-menu">
 									<h2 className="footer-title">For Doctors</h2>
 									<ul>
-										<li><a href="appointments.html"><i className="fas fa-angle-double-right"></i> Appointments</a></li>
-										<li><a href="chat.html"><i className="fas fa-angle-double-right"></i> Chat</a></li>
-										<li><a href="login.html"><i className="fas fa-angle-double-right"></i> Login</a></li>
-										<li><a href="doctor-register.html"><i className="fas fa-angle-double-right"></i> Register</a></li>
-										<li><a href="doctor-dashboard.html"><i className="fas fa-angle-double-right"></i> Doctor Dashboard</a></li>
+										<li><a href="appointments.html"><FontAwesomeIcon icon={faAnglesRight} /> Appointments</a></li>
+										<li><a href="chat.html"><FontAwesomeIcon icon={faAnglesRight} /> Chat</a></li>
+										<li><a href="login.html"><FontAwesomeIcon icon={faAnglesRight} /> Login</a></li>
+										<li><a href="doctor-register.html"><FontAwesomeIcon icon={faAnglesRight} /> Register</a></li>
+										<li><a href="doctor-dashboard.html"><FontAwesomeIcon icon={faAnglesRight} /> Doctor Dashboard</a></li>
 									</ul>
 								</div>								
 							</div>

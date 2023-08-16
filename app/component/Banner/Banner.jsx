@@ -1,3 +1,6 @@
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 const Banner = () => {
   return (
     <div>
@@ -19,7 +22,9 @@ const Banner = () => {
 									<input type="text" className="form-control" placeholder="Search Doctors, Clinics, Hospitals, Diseases Etc"/>
 									<span className="form-text">Ex : Dental or Sugar Check up etc</span>
 								</div>
-								<button type="submit" className="btn btn-primary search-btn"><i className="fas fa-search"></i> <span>Search</span></button>
+								<button type="submit" className="btn btn-primary search-btn mx-2">
+								<FontAwesomeIcon icon={faMagnifyingGlass} />
+								<span>Search</span></button>
 							</form>
 						</div>
 						

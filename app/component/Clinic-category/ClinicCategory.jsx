@@ -7,6 +7,7 @@ import FourImage from "/public/specialities/specialities-04.png"
 import FiveImage from "/public/specialities/specialities-05.png"
 import { Container } from "react-bootstrap"
 import Slider from "react-slick";
+import Link from "next/link"
 
 const data = [
 	{	title : "Urology",
@@ -34,7 +35,6 @@ const data = [
 const ClinicCategory = () => {
 	const settings = {
 		dots: true,
-		lazyLoad: true,
 		infinite: true,
 		speed: 5000,
 		autoplay: true,
@@ -93,7 +93,7 @@ const ClinicCategory = () => {
 					<div className="speicality-img">
 						<Image src={item.imageSrc} className="img-fluid" alt="Speciality"/>
 					</div>
-					<p className="mt-3">{item.title}</p>
+					<Link href="/search" className="mt-3" style={{color : '#000'}}>{item.title}</Link>
 				</div>
 			)
 		  })}

@@ -1,35 +1,12 @@
 "use client"
 import { Cairo } from 'next/font/google';
-import rtlPlugin from 'stylis-plugin-rtl';
 import dynamic from 'next/dynamic';
-import {CssBaseline } from '@mui/material';
-import createCache from '@emotion/cache';
-import { CacheProvider, ThemeProvider } from '@emotion/react';
-import { createTheme } from '@mui/material/styles';
-import AppBar from './Navbar';
-
-const cache = createCache({
-  key: 'css',
-  prepend: true,
-  stylisPlugins: [rtlPlugin],
-});
-
-const theme = createTheme({
-  typography : {
-    fontFamily : cairo.style.fontFamily
-  },
-  palette: {
-    primary : {
-        main : '#fff',
-    },
-    text:{
-      primary: "#333",
-    }
-  },
-  direction: 'rtl',
-  
+const Footer = dynamic(() => import('@/app/component/Footer/Footer'), {
+  ssr : false
 })
-
+const AppBar = dynamic(() => import('./Navbar'), {
+  ssr : false
+})
  const cairo = Cairo({ 
     subsets: ['latin'] ,
     display : 'swap',
@@ -41,15 +18,11 @@ export default function LayoutContainer({ children }) {
       <div
        className={cairo.className}
        >
-      <CacheProvider value={cache}>
-      <ThemeProvider theme={theme}>
-      <CssBaseline/>
          <>
              <AppBar/>
             {children}
+            <Footer/>
          </>
-      </ThemeProvider>
-    </CacheProvider>
       </div>
   )
 }

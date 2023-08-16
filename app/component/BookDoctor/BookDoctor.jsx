@@ -2,6 +2,10 @@
 import Image from "next/image"
 import FirstImage from "/public/doctors/doctor-07.jpg";
 import Slider from "react-slick";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
+import { faCircleCheck, faStarHalf , faStar, faLocationPin, faClock, faMoneyCheckDollar, faExclamation} from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const data = [
   {
@@ -77,45 +81,46 @@ const BookDoctor = () => {
                   return (
                     <div className="profile-widget" key={id}>
 									<div className="doc-img">
-										<a href="doctor-profile.html">
+										<Link href="/doctor-profile">
 											<Image className="img-fluid" alt="User Image" src={FirstImage}/>
-										</a>
-										<a href="javascript:void(0)" className="fav-btn">
-											<i className="far fa-bookmark"></i>
-										</a>
+										</Link>
+										<div className="fav-btn">
+										<FontAwesomeIcon icon={faBookmark} />
+										</div>
 									</div>
 									<div className="pro-content">
 										<h3 className="title">
-											<a href="doctor-profile.html">Linda Tobin</a> 
-											<i className="fas fa-check-circle verified"></i>
-										</h3>
+											<Link href="/doctor-profile">Linda Tobin</Link> 
+											<FontAwesomeIcon icon={faCircleCheck} color="green" style={{marginLeft : '5px'}}/>
+								     		</h3>
 										<p className="speciality">MBBS, MD - General Medicine, DM - Neurology</p>
 										<div className="rating">
-											<i className="fas fa-star filled"></i>
-											<i className="fas fa-star filled"></i>
-											<i className="fas fa-star filled"></i>
-											<i className="fas fa-star filled"></i>
-											<i className="fas fa-star"></i>
+										<FontAwesomeIcon icon={faStar} color="gold"/>
+										<FontAwesomeIcon icon={faStar} color="gold"/>
+										<FontAwesomeIcon icon={faStar} color="gold"/>
+										<FontAwesomeIcon icon={faStar} color="gold"/>
+										<FontAwesomeIcon icon={faStarHalf}color="gold" />
+
 											<span className="d-inline-block average-rating">(43)</span>
 										</div>
 										<ul className="available-info">
 											<li>
-												<i className="fas fa-map-marker-alt"></i> Kansas, USA
+											<FontAwesomeIcon icon={faLocationPin} style={{marginRight : '10px'}}/> Kansas, USA
 											</li>
 											<li>
-												<i className="far fa-clock"></i> Available on Fri, 22 Mar
+											<FontAwesomeIcon icon={faClock} style={{marginRight : '10px'}}/>
+											 Available on Fri, 22 Mar
 											</li>
 											<li>
-												<i className="far fa-money-bill-alt"></i> $100 - $1000 
-												<i className="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-											</li>
+											<FontAwesomeIcon icon={faMoneyCheckDollar} style={{marginRight : '10px'}}/> $100 - $1000 
+									    	</li>
 										</ul>
 										<div className="row row-sm">
 											<div className="col-6">
-												<a href="doctor-profile.html" className="btn view-btn">View Profile</a>
+												<Link href="/doctor-profile" className="btn view-btn">View Profile</Link>
 											</div>
 											<div className="col-6">
-												<a href="booking.html" className="btn book-btn">Book Now</a>
+												<Link href="/doctor-profile" className="btn book-btn">Book Now</Link>
 											</div>
 										</div>
 									</div>
