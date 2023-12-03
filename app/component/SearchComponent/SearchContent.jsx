@@ -124,12 +124,12 @@ const SearchContent = () => {
                 </ul>
               </div>
               <div className="clinic-booking">
-                <a className="view-pro-btn" href="doctor-profile.html">
+                <Link className="view-pro-btn" href="/doctor-profile">
                   الصفحة الشخصية
-                </a>
-                <a className="apt-btn" href="booking.html">
+                </Link>
+                <Link className="apt-btn" href="/booking">
                   حجز موعد
-                </a>
+                </Link>
               </div>
             </div>
           </div>

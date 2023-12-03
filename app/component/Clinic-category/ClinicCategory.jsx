@@ -34,11 +34,11 @@ const data = [
 ]
 const ClinicCategory = () => {
 	const settings = {
-		dots: true,
 		infinite: true,
 		speed: 5000,
 		autoplay: true,
       cssEase: "linear",
+	  rtl: true,
 		slidesToShow: 5,
 		slidesToScroll: 5,
 		responsive: [

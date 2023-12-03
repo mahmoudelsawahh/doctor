@@ -1,4 +1,67 @@
-.doc-department
+/* ------------------------------ */
+.banner-section{
+	min-height: 95vh;
+}
+.first-banner{
+	background-color: #E5F1FC;
+}
+.banner-info h1{
+color: #272b41;
+font-size: 48px;
+font-weight: bold;
+}
+.banner-info h1 span{
+	color : #0e82fd;
+}
+.banner-btn{
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 0px !important;
+    background: #0e82fd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 30px 0px;
+    font-size: 20px;
+    font-weight: 700;
+    width: fit-content;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+	cursor: pointer;
+}
+.banner-btn span{
+	margin-right: 10px;
+}
+.banner-section .banner-p{
+	font-size: 22px;
+    font-weight: 400;
+    color: #272b41;
+    margin-bottom: 0px;
+    max-width: 500px;
+	margin-top: 40px;
+}
+.sec-banner-content span{
+	color: #fff;
+	font-weight: 500;
+	font-size: 18px;
+}
+.sec-banner-content h1{
+color: #fff;
+margin: 0px 0px 30px;
+font-weight: bold;
+line-height: 55px;
+}
+.sec-banner-btn{
+	background-color: #0ce0ff !important;
+	color: #fff !important;
+	font-size: 18px !important;
+	font-weight: bold !important;
+	padding: 8px !important;
+	width: 120px;
+}
+
+/* ------------------------------ */
 .material-icons {
 	font-family: 'Material Icons';
 	font-weight: normal;
@@ -30,6 +93,7 @@ body {
     height: 100%;
 	overflow-x: hidden !important;
 	direction: rtl;
+	position: relative;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #272b41;
@@ -959,6 +1023,10 @@ button.bg-danger:hover {
 }
 .avatar-lg .rounded {
 	border-radius: 8px !important;
+	-webkit-border-radius: 8px !important;
+	-moz-border-radius: 8px !important;
+	-ms-border-radius: 8px !important;
+	-o-border-radius: 8px !important;
 }
 .avatar-lg .avatar-title {
 	font-size: 24px;
@@ -1119,6 +1187,10 @@ button.bg-danger:hover {
 }
 .nav-tabs .nav-link {
 	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
 }
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
     background-color: #eee;
@@ -1160,6 +1232,10 @@ button.bg-danger:hover {
 .nav-tabs-justified > li > a {
 	border-radius: 0;
 	margin-bottom: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
 }
 .nav-tabs-justified > li > a:hover,
 .nav-tabs-justified > li > a:focus {
@@ -1639,6 +1715,8 @@ button.bg-danger:hover {
 	-webkit-transform: rotate(-135deg);
 	-ms-transform: rotate(-135deg);
 	transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
 }
 .user-menu {
     float: right;
@@ -2217,10 +2295,18 @@ html.menu-opened body {
     border-radius: 4px;
 }
 .doc-img img {
-    border-radius: 4px;
+	border-radius: 4px;
 	transform: translateZ(0);
 	transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
-    width: 100%;
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	-webkit-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+	-moz-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+	-ms-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+	-o-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
 }
 .doc-img:hover img {
     -webkit-transform: scale(1.15);
@@ -2558,7 +2644,11 @@ html.menu-opened body {
 	width: 20px;
 	background-color: #fff;
 	border: 1px solid #ccc;
-	border-radius: 50%
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
 }
 .custom_radio .checkmark:after {
 	display: block;
@@ -3402,18 +3492,18 @@ html.menu-opened body {
     list-style: none;
 }
 .booking-date li {
-    position: relative;
-    font-size: 14px;
-    font-weight: 500;
+    position: relative !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
     color: #272b41;
     text-transform: capitalize;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
 }
 .booking-date li span {
-    float: right;
-    color: #757575;
-    font-weight: 400;
-    font-size: 15px;
+    float: left !important;
+    color: #757575 !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
 }
 .booking-fee {
     padding: 0;
@@ -3428,7 +3518,7 @@ html.menu-opened body {
     margin-bottom: 15px;
 }
 .booking-fee li span {
-    float: right;
+    float: left;
     color: #757575;
     font-weight: 400;
     font-size: 15px;
@@ -3451,7 +3541,7 @@ html.menu-opened body {
 .booking-total ul li .total-cost {
     color: #20c0f3;
     font-size: 16px;
-    float: right;
+    float: left;
 }
 
 /*-----------------
@@ -6461,3 +6551,5 @@ html.menu-opened body {
 		margin-bottom: 10px;
 	}
 }
+
+

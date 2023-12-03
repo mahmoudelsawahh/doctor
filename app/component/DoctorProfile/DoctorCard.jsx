@@ -8,6 +8,7 @@ import Image2 from "/public/features/feature-02.jpg";
 import Image3 from "/public/features/feature-03.jpg";
 import Image4 from "/public/features/feature-04.jpg";
 import { faComment, faThumbsUp } from "@fortawesome/free-regular-svg-icons";
+import Link from "next/link";
 const DoctorCard = () => {
   return (
     <>
@@ -122,12 +123,12 @@ const DoctorCard = () => {
                 </ul>
               </div>
               <div className="clinic-booking">
-                <a className="view-pro-btn" href="doctor-profile.html">
+                <Link className="view-pro-btn" href="/doctor-profile">
                   الصفحة الشخصية
-                </a>
-                <a className="apt-btn" href="booking.html">
+                </Link>
+                <Link className="apt-btn" href="/booking">
                   حجز موعد
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,85 +1,61 @@
 "use client"
+import React from 'react'
+import PatientsDashboard from '../PatientsDashboard/PatientsDashboard'
 import Image from "next/image"
 import FirstImage from "/public/doctors/doctor-07.jpg";
-import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { faCircleCheck, faStarHalf , faStar, faLocationPin, faClock, faMoneyCheckDollar, faExclamation} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const data = [
-  {
-    title : 1
-  },
-  {
-    title : 1
-  },
-  {
-    title : 1
-  },
-  {
-    title : 1
-  },
-  {
-    title : 1
-  },
-  {
-    title : 1
-  },
-  {
-    title : 1
-  },
-]
-const BookDoctor = () => {
-  const settings = {
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-	rtl: true,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
+    {
+      title : 1
+    },
+    {
+      title : 1
+    },
+    {
+      title : 1
+    },
+    {
+      title : 1
+    },
+    {
+      title : 1
+    },
+    {
+      title : 1
+    },
+    {
+      title : 1
+    },
+  ]
+
+const FavouritesComponent = () => {
   return (
     <>
-        	<section className="section section-doctor">
-				<div className="container-fluid">
-				   <div className="row">
-						<div className="col-lg-4">
-							<div className="section-header ">
-								<h2>Book Our Doctor</h2>
-								<p>Lorem Ipsum is simply dummy text </p>
-							</div>
-							<div className="about-content">
-								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-								<p>web page editors now use Lorem Ipsum as their default model text, and a search for  will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes</p>					
-								<a href="javascript:;">Read More..</a>
-							</div>
-						</div>
-						<div className="col-lg-8">
-							<div className="doctor-slider slider">
-              <Slider {...settings}>
-                {data.map((item , id)=> {
+           <div className="breadcrumb-bar">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-md-12 col-12">
+              <h2 className="breadcrumb-title text-center"> اعدادات الحساب</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+              <PatientsDashboard/>
+            </div>
+
+            <div class="col-md-7 col-lg-8 col-xl-9">
+               <div className='row gap-4' style={{justifyContent : 'center', alignItems : 'center'}}>
+               {data.map((item , id)=> {
                   return (
-                    <div className="profile-widget" key={id}>
+                    <div className="profile-widget col-12 col-sm-6 col-md-4 col-lg-3 " key={id}>
 									<div className="doc-img">
 										<Link href="/doctor-profile">
 											<Image className="img-fluid" alt="User Image" src={FirstImage}/>
@@ -90,8 +66,8 @@ const BookDoctor = () => {
 									</div>
 									<div className="pro-content">
 										<h3 className="title">
-										<FontAwesomeIcon icon={faCircleCheck} color="green" style={{marginLeft : '5px'}}/>
-											<Link href="/doctor-profile" className="mx-2">Linda Tobin</Link> 
+                                        <FontAwesomeIcon icon={faCircleCheck} color="green" style={{marginLeft : '5px'}}/>
+											<Link href="/doctor-profile">Linda Tobin</Link> 
 								     		</h3>
 										<p className="speciality">MBBS, MD - General Medicine, DM - Neurology</p>
 										<div className="rating">
@@ -116,10 +92,10 @@ const BookDoctor = () => {
 									    	</li>
 										</ul>
 										<div className="row row-sm">
-											<div className="col-sm-6 col-12">
+											<div className="col-6">
 												<Link href="/doctor-profile" className="btn view-btn">View Profile</Link>
 											</div>
-											<div className="col-sm-6 col-12 my-2 my-md-0">
+											<div className="col-6">
 												<Link href="/doctor-profile" className="btn book-btn">Book Now</Link>
 											</div>
 										</div>
@@ -127,14 +103,13 @@ const BookDoctor = () => {
 					 </div>
                   )
                 })}
-             </Slider>
-							</div>
-						</div>
-				   </div>
-				</div>
-			</section>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
 
-export default BookDoctor
+export default FavouritesComponent
